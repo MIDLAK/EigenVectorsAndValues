@@ -9,7 +9,8 @@ Vector create_rvector(int size, int left, int right)
 
     srand(time(NULL));
     for (int i = 0; i < size; i++)
-        v.data[i] = (double)(rand() % (right - left +1) + left);
+        v.data[i] = 
+            (double)(rand() % (right - left +1) + left) + (double)rand()/RAND_MAX;
 
     return v;
 }

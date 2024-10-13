@@ -10,7 +10,8 @@ Matrix create_rmatrix(int rows, int cols, int left, int right)
     srand(time(NULL));
     for (int i = 0; i < m.rows; i++) 
         for (int j = 0; j < m.cols; j++)
-            m.data[i*cols+j] = (double)(rand() % (right - left + 1) + left);
+            m.data[i*cols+j] = 
+                (double)(rand() % (right - left + 1) + left) + (double)rand()/RAND_MAX;
 
     return m;
 }
